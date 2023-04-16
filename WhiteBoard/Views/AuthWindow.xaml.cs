@@ -33,7 +33,12 @@ namespace WhiteBoard.Views
             {
                 VM.AuthSucceded += (s, e) =>
                 {
-
+                    new AdminMainWindow()
+                    {
+                        DataContext = new AdminMainWindowVM()
+                    }.Show();
+                    
+                    Close();
                 };
             }
         }

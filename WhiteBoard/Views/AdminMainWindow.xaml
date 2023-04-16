@@ -5,16 +5,51 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:WhiteBoard.Views"
+    xmlns:vms="clr-namespace:WhiteBoard.ViewModels"
     mc:Ignorable="d"
     Title="AuthWindow"
     WindowStyle="None"
-    Height="400"
-    Width="600"
-    SizeToContent="Height"
+    Height="800"
+    Width="1200"
+    WindowStartupLocation="CenterScreen"
     AllowsTransparency="True"
-    Background="Transparent">
-    
-    <Grid>
+    Background="Transparent"
+    d:DataContext="{d:DesignInstance vms:AdminMainWindowVM,
+                    IsDesignTimeCreatable=True}">
 
-    </Grid>
+    <Window.Resources>
+        <Style
+            TargetType="{x:Type TextBlock}">
+            <Setter
+                Property="FontSize"
+                Value="18" />
+            <Setter
+                Property="Foreground"
+                Value="Black" />
+        </Style>
+    </Window.Resources>
+
+    <Border
+        CornerRadius="20"
+        BorderThickness="3"
+        BorderBrush="Black"
+        Background="#C6D8FF"
+        Padding="0 20">
+        <Grid>
+            <StackPanel>
+                <TextBlock
+                    FontSize="24"
+                    FontWeight="Medium"
+                    HorizontalAlignment="Center"
+                    Text="Добро пожаловать в административную панель!" />
+
+                <Border
+                    Margin="0 20 0 0"
+                    Background="Black"
+                    Height="2" />
+            </StackPanel>
+
+
+        </Grid>
+    </Border>
 </Window>

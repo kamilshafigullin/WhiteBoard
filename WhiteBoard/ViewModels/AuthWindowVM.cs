@@ -67,7 +67,7 @@ namespace WhiteBoard.ViewModels
                         && read.GetValue(2).ToString() == Password
                         && (bool)read.GetValue(3) == IsAdmin)
                     {
-                        MessageBox.Show("Welcome");
+                        AuthSucceded?.Invoke(this, EventArgs.Empty);
                     }
                 }
             }

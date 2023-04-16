@@ -37,7 +37,6 @@
         CornerRadius="20"
         BorderThickness="3"
         BorderBrush="Black"
-        Background="#C6D8FF"
         Padding="100 20">
         <StackPanel>
             <TextBlock
@@ -84,7 +83,14 @@
                 FocusVisualStyle="{x:Null}"
                 FontSize="14"
                 FontWeight="Medium"
+                Background="Black"
                 Content="Я администратор" />
         </StackPanel>
+
+        <Border.Background>
+            <ImageBrush
+                Stretch="UniformToFill"
+                ImageSource="../Images/study_texture.png" />
+        </Border.Background>
     </Border>
 </Window>
